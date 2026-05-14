@@ -7,8 +7,8 @@ const ToolsList = () => {
   const tools = [
     {
       id: 'video-to-gif',
-      title: 'Video to GIF',
-      description: 'Convert your MP4 and other video files into high-quality GIFs instantly in your browser.',
+      title: 'וידאו ל-GIF',
+      description: 'המרת קבצי MP4 ווידאו אחרים ל-GIF באיכות גבוהה ישירות בדפדפן, ללא העלאה לשרת.',
       icon: <Film size={32} className="tool-icon" />,
       path: '/video-to-gif',
       color: 'var(--accent-primary)'
@@ -18,8 +18,8 @@ const ToolsList = () => {
   return (
     <div className="tools-list-container">
       <div className="tools-header">
-        <h2>Available Tools</h2>
-        <p>Select a tool below to get started. All processing is done locally in your browser for maximum privacy and speed.</p>
+        <h2>הכלים הזמינים</h2>
+        <p>בחר כלי מהרשימה מטה כדי להתחיל. כל העיבוד מתבצע מקומית בדפדפן שלך לפרטיות מירבית וביצועים מהירים.</p>
       </div>
       
       <div className="tools-grid">
@@ -33,8 +33,8 @@ const ToolsList = () => {
               <p>{tool.description}</p>
             </div>
             <div className="tool-footer">
-              <span>Open Tool</span>
-              <span className="arrow">→</span>
+              <span>פתח כלי</span>
+              <span className="arrow">←</span>
             </div>
           </Link>
         ))}

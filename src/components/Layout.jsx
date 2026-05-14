@@ -10,15 +10,15 @@ const Layout = () => {
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
   const navItems = [
-    { path: '/', label: 'All Tools', icon: <Wrench size={20} /> },
-    { path: '/video-to-gif', label: 'Video to GIF', icon: <Film size={20} /> },
+    { path: '/', label: 'כל הכלים', icon: <Wrench size={20} /> },
+    { path: '/video-to-gif', label: 'וידאו ל-GIF', icon: <Film size={20} /> },
   ];
 
   return (
     <div className="layout">
       <div className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h2>Toolbox</h2>
+          <h2>ארגז כלים</h2>
           <button onClick={toggleSidebar} className="close-btn d-md-none">
             <X size={24} />
           </button>
@@ -42,7 +42,7 @@ const Layout = () => {
           <button onClick={toggleSidebar} className="menu-btn">
             <Menu size={24} />
           </button>
-          <h1>{navItems.find(item => item.path === location.pathname)?.label || 'Toolbox'}</h1>
+          <h1>{navItems.find(item => item.path === location.pathname)?.label || 'ארגז כלים'}</h1>
         </header>
         <main className="content-area">
           <Outlet />

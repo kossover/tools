@@ -21,7 +21,8 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Assistant', 'Rubik', 'Inter', sans-serif;
+  direction: rtl;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.5;

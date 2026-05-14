@@ -85,5 +85,5 @@
 }
 
 .tool-card:hover .tool-footer .arrow {
-  transform: translateX(4px);
+  transform: translateX(-4px);
 }

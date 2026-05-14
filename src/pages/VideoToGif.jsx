@@ -69,7 +69,7 @@ const VideoToGif = () => {
       setGifUrl(url);
     } catch (error) {
       console.error('Error during conversion:', error);
-      alert('An error occurred during conversion.');
+      alert('אירעה שגיאה במהלך ההמרה.');
     } finally {
       setIsConverting(false);
     }
@@ -85,7 +85,7 @@ const VideoToGif = () => {
     return (
       <div className="loading-container">
         <Loader2 className="spinner" size={48} />
-        <p>Loading FFmpeg core...</p>
+        <p>טוען את מנוע ההמרה...</p>
       </div>
     );
   }
@@ -93,8 +93,8 @@ const VideoToGif = () => {
   return (
     <div className="tool-container">
       <div className="tool-header">
-        <h2>Video to GIF Converter</h2>
-        <p>Convert your videos to high-quality GIFs right in your browser. No data is sent to any server.</p>
+        <h2>ממיר וידאו ל-GIF</h2>
+        <p>המר את סרטוני הוידאו שלך ל-GIF באיכות גבוהה ישירות בדפדפן. אף מידע לא נשלח לשרת.</p>
       </div>
 
       <div className="tool-content">
@@ -109,9 +109,9 @@ const VideoToGif = () => {
             />
             <label htmlFor="video-upload" className="upload-label">
               <UploadCloud size={48} className="upload-icon" />
-              <h3>Drop a video file here</h3>
-              <p>or click to browse from your computer</p>
-              <span className="supported-formats">Supports MP4, WebM, MOV, and more</span>
+              <h3>גרור קובץ וידאו לכאן</h3>
+              <p>או לחץ כדי לבחור קובץ מהמחשב</p>
+              <span className="supported-formats">תומך ב-MP4, WebM, MOV ועוד</span>
             </label>
           </div>
         )}
@@ -124,7 +124,7 @@ const VideoToGif = () => {
                 <span className="file-name">{videoFile.name}</span>
                 <span className="file-size">{(videoFile.size / (1024 * 1024)).toFixed(2)} MB</span>
               </div>
-              <button onClick={resetState} className="icon-btn" title="Remove file">
+              <button onClick={resetState} className="icon-btn" title="הסר קובץ">
                 <X size={20} />
               </button>
             </div>
@@ -138,10 +138,10 @@ const VideoToGif = () => {
                 {isConverting ? (
                   <>
                     <RefreshCw size={20} className="spinner" />
-                    Converting... {progress}%
+                    ממיר... {progress}%
                   </>
                 ) : (
-                  'Convert to GIF'
+                  'המר ל-GIF'
                 )}
               </button>
               
@@ -157,14 +157,14 @@ const VideoToGif = () => {
         {gifUrl && (
           <div className="result-area">
             <div className="success-banner">
-              Conversion complete!
+              ההמרה הושלמה בהצלחה!
             </div>
             <div className="gif-preview-container">
               <img src={gifUrl} alt="Converted GIF" className="gif-preview" />
             </div>
             <div className="result-actions">
               <button className="secondary-btn" onClick={resetState}>
-                Convert Another
+                המר קובץ נוסף
               </button>
               <a 
                 href={gifUrl} 
@@ -172,7 +172,7 @@ const VideoToGif = () => {
                 className="primary-btn download-btn"
               >
                 <Download size={20} />
-                Download GIF
+                הורד GIF
               </a>
             </div>
           </div>
