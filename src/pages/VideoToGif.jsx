@@ -27,9 +27,10 @@ const VideoToGif = () => {
       setProgress(Math.round(progress * 100));
     });
     
+    const baseURL = window.location.origin;
     await ffmpeg.load({
-      coreURL: '/ffmpeg-core.js',
-      wasmURL: '/ffmpeg-core.wasm',
+      coreURL: `${baseURL}/ffmpeg-core.js`,
+      wasmURL: `${baseURL}/ffmpeg-core.wasm`,
     });
     
     setLoaded(true);
