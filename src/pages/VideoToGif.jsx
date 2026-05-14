@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { fetchFile, toBlobURL } from '@ffmpeg/util';
-import coreURL from '@ffmpeg/core/dist/umd/ffmpeg-core.js?url';
-import wasmURL from '@ffmpeg/core/dist/umd/ffmpeg-core.wasm?url';
 import { UploadCloud, FileVideo, Loader2, Download, RefreshCw, X } from 'lucide-react';
 import './VideoToGif.css';
 
@@ -30,8 +28,8 @@ const VideoToGif = () => {
     });
     
     await ffmpeg.load({
-      coreURL: await toBlobURL(coreURL, 'text/javascript'),
-      wasmURL: await toBlobURL(wasmURL, 'application/wasm'),
+      coreURL: await toBlobURL('/ffmpeg-core.js', 'text/javascript'),
+      wasmURL: await toBlobURL('/ffmpeg-core.wasm', 'application/wasm'),
     });
     
     setLoaded(true);
